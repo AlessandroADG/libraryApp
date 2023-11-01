@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:library_app/core/presentation/widgets/text_app_widget.dart';
+import 'package:library_app/core/presentation/widgets/text_field_app_widget.dart';
 import 'package:library_app/core/utils/colors.dart';
+import 'package:library_app/core/utils/keys.dart';
 
 class LoginBodyWidget extends StatelessWidget {
   const LoginBodyWidget({super.key});
@@ -8,10 +10,10 @@ class LoginBodyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage(
-            "assets/images/library_background.jpeg",
+            Keys.backgroundImage,
           ),
           fit: BoxFit.cover,
         ),
@@ -30,22 +32,38 @@ class LoginBodyWidget extends StatelessWidget {
 
               ///Title
               TextAppWidget(
-                text: 'Hello',
+                text: Keys.titleLogin,
                 style: TextStyle(
-                  color: ColorsConst.darkBlue,
-                  fontSize: 16,
+                  color: ColorsConst.black,
+                  fontSize: 30,
+                  fontWeight: FontWeight.w900,
                 ),
               ),
               const Spacer(),
 
               ///first text field
-              const TextField(),
+              InkWell(
+                onTap: () {},
+                child: TextFieldAppWidget(
+                  hintText: 'Sign In',
+                  controller: TextEditingController(),
+                ),
+              ),
               const SizedBox(
-                height: 10,
+                height: 16,
               ),
 
               ///second text field
-              const TextField(),
+              InkWell(
+                onTap: () {},
+                child: TextFieldAppWidget(
+                  hintText: 'Sign Up',
+                  controller: TextEditingController(),
+                ),
+              ),
+              const SizedBox(
+                height: 16,
+              )
             ],
           ),
         ),

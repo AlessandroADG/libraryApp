@@ -45,8 +45,10 @@ class LoginBodyWidget extends StatelessWidget {
               InkWell(
                 onTap: () {},
                 child: TextFieldAppWidget(
-                  hintText: 'Sign In',
+                  hintText: Keys.signInKeys,
                   controller: TextEditingController(),
+                  hintStyle: ColorsConst.lightBlue,
+                  fillColor: ColorsConst.shadeWhite,
                 ),
               ),
               const SizedBox(
@@ -57,8 +59,10 @@ class LoginBodyWidget extends StatelessWidget {
               InkWell(
                 onTap: () {},
                 child: TextFieldAppWidget(
-                  hintText: 'Sign Up',
+                  hintText: Keys.signUpKeys,
                   controller: TextEditingController(),
+                  hintStyle: ColorsConst.lightBlue,
+                  fillColor: ColorsConst.shadeWhite,
                 ),
               ),
               const SizedBox(

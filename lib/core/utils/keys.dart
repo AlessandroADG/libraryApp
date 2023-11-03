@@ -6,5 +6,7 @@ class Keys{
 
   ///login Keys
   static String titleLogin = 'Hello!';
+  static String signUpKeys = 'Sign Up';
+  static String signInKeys = 'Sign In';
 
 }

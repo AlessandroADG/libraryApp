@@ -4,8 +4,10 @@ import 'package:library_app/core/utils/colors.dart';
 class TextFieldAppWidget extends StatelessWidget {
   final String hintText;
   final TextEditingController controller;
+  final Color hintStyle;
+  final Color fillColor;
   const TextFieldAppWidget(
-      {required this.hintText, required this.controller, super.key});
+      {required this.hintText, required this.controller, super.key,required this.fillColor, required this.hintStyle,});
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +22,10 @@ class TextFieldAppWidget extends StatelessWidget {
         ),
         filled: true,
         hintStyle: TextStyle(
-          color: ColorsConst.ligthGrey,
+          color: hintStyle,
         ),
         hintText: hintText,
-        fillColor: ColorsConst.shadeWhite,
+        fillColor: fillColor,
       ),
     );
   }

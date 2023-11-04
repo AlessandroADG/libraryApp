@@ -1,19 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:library_app/core/utils/colors.dart';
 
 class TextFieldAppWidget extends StatelessWidget {
   final String hintText;
   final TextEditingController controller;
   final Color hintStyle;
   final Color fillColor;
-  const TextFieldAppWidget(
-      {required this.hintText, required this.controller, super.key,required this.fillColor, required this.hintStyle,});
+  final Widget? suffixIcon;
+
+  const TextFieldAppWidget({
+    required this.hintText,
+    required this.controller,
+    super.key,
+    required this.fillColor,
+    required this.hintStyle,
+    this.suffixIcon,
+  });
 
   @override
   Widget build(BuildContext context) {
     return TextField(
       controller: controller,
-      textAlign: TextAlign.center,
+      textAlign: TextAlign.start,
       decoration: InputDecoration(
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(
@@ -21,6 +28,7 @@ class TextFieldAppWidget extends StatelessWidget {
           ),
         ),
         filled: true,
+        suffixIcon: suffixIcon,
         hintStyle: TextStyle(
           color: hintStyle,
         ),

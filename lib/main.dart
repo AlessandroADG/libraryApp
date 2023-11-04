@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:library_app/features/login/presentation/pages/login_page.dart';
+
+import 'core/route/app_auto_route.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    const MyApp(),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -11,8 +14,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: LoginPage(),
+    AppRouter router = AppRouter();
+    return MaterialApp.router(
+      routerConfig: router.config(),
     );
   }
 }

@@ -1,6 +1,8 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:library_app/core/presentation/widgets/text_app_widget.dart';
 import 'package:library_app/core/presentation/widgets/text_field_app_widget.dart';
+import 'package:library_app/core/route/app_auto_route.gr.dart';
 import 'package:library_app/core/utils/colors.dart';
 import 'package:library_app/core/utils/keys.dart';
 
